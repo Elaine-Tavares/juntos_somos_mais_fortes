@@ -1,0 +1,262 @@
+.navbar {
+  width: 100%;
+  background-color: var(--primary_color);
+  border-bottom: 3px solid var(--secondary_color);
+  position: relative;
+  z-index: 1000;
+}
+
+.container {
+  width: min(1120px, 90%);
+  min-height: 75px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--terciary_color);
+  text-decoration: none;
+}
+
+.logo svg {
+  font-size: 28px;
+}
+
+.logo span {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 0.9rem;
+  line-height: 1.1;
+}
+
+.logo strong {
+  font-size: 1.05rem;
+}
+
+/* =========================
+   BOTÃO MOBILE
+========================= */
+
+.menuButton {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  color: var(--terciary_color);
+
+  border: none;
+
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  transition: transform 0.25s ease;
+}
+
+.menuButton:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   MENU MOBILE
+========================= */
+
+.nav {
+  position: absolute;
+
+  top: 75px;
+  left: 0;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 20px;
+
+  background-color: var(--primary_color);
+  border-bottom: 1px solid var(--secondary_color);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  /* Estado fechado */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-15px);
+
+  max-height: 0;
+  overflow: hidden;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    max-height 0.4s ease,
+    padding 0.3s ease,
+    visibility 0.3s ease;
+}
+
+/* =========================
+   MENU ABERTO
+========================= */
+
+.navAberto {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+
+  max-height: 500px;
+
+  padding: 20px;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.link {
+  padding: 14px 10px;
+
+  color: var(--terciary_color);
+  text-decoration: none;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  opacity: 0;
+
+  transform: translateY(-8px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    background-color 0.2s ease;
+}
+
+/* Quando o menu abre, os links aparecem */
+.navAberto .link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+
+.active {
+  font-weight: 800;
+}
+
+/* =========================
+   BOTÃO DOAÇÃO
+========================= */
+
+.doeButton {
+  margin-top: 10px;
+  padding: 13px 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border-radius: 8px;
+
+  background-color: var(--secondary_color);
+  color: var(--terciary_color);
+
+  text-decoration: none;
+  font-weight: 700;
+
+  opacity: 0;
+  transform: translateY(-8px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    background-color 0.2s ease;
+}
+
+/* Botão aparece junto com o menu */
+.navAberto .doeButton {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.doeButton:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 850px) {
+  .container {
+    min-height: 85px;
+  }
+
+  .menuButton {
+    display: none;
+  }
+
+  .nav {
+    position: static;
+
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    gap: 25px;
+
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+
+    max-height: none;
+    overflow: visible;
+
+    transition: none;
+  }
+
+  .link {
+    padding: 8px 0;
+
+    opacity: 1;
+    transform: none;
+
+    transition: opacity 0.2s ease;
+  }
+
+  .doeButton {
+    margin-top: 0;
+
+    opacity: 1;
+    transform: none;
+  }
+}

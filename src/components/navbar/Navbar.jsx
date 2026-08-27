@@ -1,0 +1,107 @@
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { FaBars, FaTimes, FaHeart } from "react-icons/fa";
+
+import styles from "./Navbar.module.css";
+
+function Navbar() {
+  const [menuAberto, setMenuAberto] = useState(false);
+
+  const fecharMenu = () => {
+    setMenuAberto(false);
+  };
+
+  return (
+    <header className={styles.navbar}>
+      <div className={styles.container}>
+        {/* LOGO */}
+        <NavLink to="/" className={styles.logo} onClick={fecharMenu}>
+          <FaHeart />
+          <span>
+            Juntos Somos
+            <strong>Mais Fortes</strong>
+          </span>
+        </NavLink>
+
+        {/* BOTÃO MENU MOBILE */}
+        <button
+          type="button"
+          className={styles.menuButton}
+          onClick={() => setMenuAberto(!menuAberto)}
+          aria-label={menuAberto ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={menuAberto}
+        >
+          {menuAberto ? <FaTimes /> : <FaBars />}
+        </button>
+
+        {/* MENU */}
+        <nav
+          className={`${styles.nav} ${
+            menuAberto ? styles.navAberto : ""
+          }`}
+        >
+          <NavLink
+            to="/"
+            onClick={fecharMenu}
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
+          >
+            Início
+          </NavLink>
+
+          <NavLink
+            to="/quem-somos"
+            onClick={fecharMenu}
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
+          >
+            Quem Somos
+          </NavLink>
+
+          <NavLink
+            to="/projetos"
+            onClick={fecharMenu}
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
+          >
+            Projetos
+          </NavLink>
+
+          <NavLink
+            to="/seja-voluntario"
+            onClick={fecharMenu}
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
+          >
+            Seja Voluntário
+          </NavLink>
+
+          <NavLink
+            to="/contato"
+            onClick={fecharMenu}
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
+          >
+            Contato
+          </NavLink>
+
+          <NavLink
+            to="/doe"
+            onClick={fecharMenu}
+            className={styles.doeButton}
+          >
+            <FaHeart />
+            Doe
+          </NavLink>
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+export default Navbar;
