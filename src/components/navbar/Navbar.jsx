@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes, FaHeart } from "react-icons/fa";
+import Logo from '../../assets/logo_provisorio.webp'
 
 import styles from "./Navbar.module.css";
 
@@ -16,7 +17,7 @@ function Navbar() {
       <div className={styles.container}>
         {/* LOGO */}
         <NavLink to="/" className={styles.logo} onClick={fecharMenu}>
-          <FaHeart />
+          <img className={styles.logo_provisorio} src={Logo} alt="Logo" />
           <span>
             Juntos Somos
             <strong>Mais Fortes</strong>

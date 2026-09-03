@@ -1,5 +1,7 @@
-import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
+import styles from "./Home.module.css";
+import ImagemPrincipal from '../../assets/imagem_principal.webp';
+import Banda from '../../assets/banda_de_musica_nova_cidade.webp'
 
 import {
   FaHeart,
@@ -100,8 +102,8 @@ function Home() {
 
           <div className={styles.heroImage}>
             <img
-              src="/images/hero.jpg"
-              alt="Voluntários realizando uma ação social"
+              src={ImagemPrincipal}
+              alt="Imagem Principal"
             />
           </div>
         </div>
@@ -147,8 +149,8 @@ function Home() {
         <div className={styles.container}>
           <div className={styles.aboutImage}>
             <img
-              src="/images/quem-somos.jpg"
-              alt="Voluntários do projeto social"
+              src={Banda}
+              alt="Banda"
             />
           </div>
 

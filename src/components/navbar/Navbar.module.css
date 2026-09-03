@@ -1,7 +1,9 @@
 .navbar {
   width: 100%;
+
   background-color: var(--primary_color);
   border-bottom: 3px solid var(--secondary_color);
+
   position: relative;
   z-index: 1000;
 }
@@ -9,6 +11,7 @@
 .container {
   width: min(1120px, 90%);
   min-height: 75px;
+
   margin: 0 auto;
 
   display: flex;
@@ -31,6 +34,7 @@
 
 .logo svg {
   font-size: 28px;
+  flex-shrink: 0;
 }
 
 .logo span {
@@ -45,8 +49,14 @@
   font-size: 1.05rem;
 }
 
+.logo_provisorio {
+  width: 100px;
+  border-radius: 12px;
+
+}
+
 /* =========================
-   BOTÃO MOBILE
+   BOTÃO MENU
 ========================= */
 
 .menuButton {
@@ -56,6 +66,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding: 0;
 
   background: transparent;
   color: var(--terciary_color);
@@ -70,6 +82,11 @@
 
 .menuButton:hover {
   transform: scale(1.05);
+}
+
+.menuButton:focus-visible {
+  outline: 2px solid var(--secondary_color);
+  outline-offset: 3px;
 }
 
 /* =========================
@@ -94,9 +111,10 @@
 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 
-  /* Estado fechado */
+  /* Menu fechado */
   opacity: 0;
   visibility: hidden;
+
   transform: translateY(-15px);
 
   max-height: 0;
@@ -139,7 +157,6 @@
   font-weight: 600;
 
   opacity: 0;
-
   transform: translateY(-8px);
 
   transition:
@@ -148,7 +165,7 @@
     background-color 0.2s ease;
 }
 
-/* Quando o menu abre, os links aparecem */
+/* Links aparecem quando o menu abre */
 .navAberto .link {
   opacity: 1;
   transform: translateY(0);
@@ -156,6 +173,11 @@
 
 .link:hover {
   opacity: 0.7;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--secondary_color);
+  outline-offset: 2px;
 }
 
 .active {
@@ -192,7 +214,7 @@
     background-color 0.2s ease;
 }
 
-/* Botão aparece junto com o menu */
+/* Botão aparece quando o menu abre */
 .navAberto .doeButton {
   opacity: 1;
   transform: translateY(0);
@@ -201,6 +223,27 @@
 .doeButton:hover {
   transform: translateY(-2px);
   opacity: 0.9;
+}
+
+.doeButton:focus-visible {
+  outline: 2px solid var(--terciary_color);
+  outline-offset: 3px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 600px) {
+  .nav {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .navAberto {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 /* =========================
@@ -212,10 +255,12 @@
     min-height: 85px;
   }
 
+  /* Esconde botão hamburger */
   .menuButton {
     display: none;
   }
 
+  /* Menu vira horizontal */
   .nav {
     position: static;
 
@@ -223,8 +268,9 @@
 
     display: flex;
     flex-direction: row;
-
     align-items: center;
+
+    gap: 25px;
 
     padding: 0;
 
@@ -232,10 +278,9 @@
     border: none;
     box-shadow: none;
 
-    gap: 25px;
-
     opacity: 1;
     visibility: visible;
+
     transform: none;
 
     max-height: none;
@@ -244,6 +289,7 @@
     transition: none;
   }
 
+  /* Links desktop */
   .link {
     padding: 8px 0;
 
@@ -253,10 +299,25 @@
     transition: opacity 0.2s ease;
   }
 
+  .link:hover {
+    opacity: 0.7;
+  }
+
+  /* Botão doar desktop */
   .doeButton {
     margin-top: 0;
 
     opacity: 1;
     transform: none;
+  }
+}
+
+/* =========================
+   DESKTOP GRANDE
+========================= */
+
+@media (min-width: 1200px) {
+  .nav {
+    gap: 30px;
   }
 }
