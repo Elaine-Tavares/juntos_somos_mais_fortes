@@ -1,0 +1,429 @@
+/* ================================
+   BASE
+================================ */
+
+.page {
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+}
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+  padding: 60px 0;
+  background-color: var(--primary_color);
+  border-bottom: 3px solid var(--secondary_color);
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sectionTag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  color: var(--terciary_color);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hero h1 {
+  margin: 0 0 18px;
+  color: var(--terciary_color);
+  line-height: 1.15;
+}
+
+.hero p {
+  margin: 0;
+  max-width: 600px;
+  color: var(--terciary_color);
+  line-height: 1.7;
+}
+
+.heroImage {
+  width: 100%;
+}
+
+.heroImage img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* ================================
+   HISTÓRIA
+================================ */
+
+.history {
+  padding: 60px 0 40px 0;
+  border-bottom: 3px solid var(--secondary_color);
+}
+
+.history .container {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.historyImage {
+  width: 100%;
+}
+
+.historyImage img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.historyContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.historyContent h2 {
+  margin: 0 0 20px;
+  color: var(--primary_color);
+  line-height: 1.25;
+}
+
+.historyContent p {
+  margin: 0 0 15px;
+  line-height: 1.7;
+}
+
+.historyContent strong {
+  color: var(--terciary_color);
+  opacity: 1;
+}
+
+/* ================================
+   PROPÓSITO
+================================ */
+
+.mission {
+  padding: 65px 0;
+  border-bottom: 3px solid var(--secondary_color);
+}
+
+.sectionIntro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.sectionIntro .sectionTag {
+  margin-bottom: 10px;
+}
+
+.sectionIntro h2 {
+  margin: 0 0 15px;
+  color: var(--primary_color);
+  line-height: 1.3;
+}
+
+.sectionIntro p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* FLEXBOX */
+.values {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.valueCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 22px;
+  background-color: #fff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.valueIcon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background-color: var(--primary_color);
+  color: var(--secondary_color);
+}
+
+.valueCard h3 {
+  margin: 0 0 10px;
+  color: var(--primary_color);
+}
+
+.valueCard p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ================================
+   AÇÕES
+================================ */
+
+.actions {
+  padding: 65px 0;
+  border-bottom: 3px solid var(--secondary_color);
+}
+
+.sectionHeader {
+  margin-bottom: 35px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  color: var(--primary_color);
+  line-height: 1.3;
+}
+
+/* FLEXBOX */
+.actionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.actionCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 22px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+}
+
+.actionIcon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: var(--primary_color);
+  color: var(--secondary_color);
+}
+
+.actionCard h3 {
+  margin: 0 0 8px;
+  color: var(--primary_color);
+}
+
+.actionCard p {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ================================
+   CTA
+================================ */
+
+.cta {
+  padding: 65px 0;
+  text-align: center;
+  border-bottom: 3px solid var(--secondary_color);
+}
+
+.ctaContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ctaIcon {
+  margin-bottom: 15px;
+  color: var(--secondary_color);
+}
+
+.cta h2 {
+  max-width: 700px;
+  margin: 0 0 15px;
+  color: var(--terciary_color);
+  line-height: 1.3;
+}
+
+.cta p {
+  max-width: 600px;
+  margin: 0 0 25px;
+  color: var(--terciary_color);
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.ctaButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  background-color: var(--secondary_color);
+  color: var(--terciary_color);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (min-width: 600px) {
+  .hero {
+    padding: 75px 0;
+  }
+
+  .heroImage img {
+    height: 380px;
+  }
+
+  .historyImage img {
+    height: 380px;
+  }
+
+  /* FLEXBOX */
+  .values {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .valueCard {
+    flex: 1 1 220px;
+  }
+
+  .actionCard {
+    padding: 25px;
+  }
+}
+
+/* ================================
+   DESKTOP
+================================ */
+
+@media (min-width: 850px) {
+  .hero {
+    padding: 90px 0;
+  }
+
+  .hero .container {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .heroContent {
+    flex: 1;
+  }
+
+  .heroImage {
+    flex: 1;
+  }
+
+  .heroImage img {
+    height: 420px;
+  }
+
+  .history {
+    padding: 90px 0;
+  }
+
+  .history .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .historyImage {
+    flex: 1;
+  }
+
+  .historyContent {
+    flex: 1;
+  }
+
+  .historyImage img {
+    height: 430px;
+  }
+
+  .mission,
+  .actions,
+  .cta {
+    padding: 90px 0;
+  }
+
+  .sectionIntro h2,
+  .sectionHeader h2,
+
+  /* FLEXBOX */
+  .values {
+    flex-wrap: nowrap;
+  }
+
+  /* FLEXBOX */
+  .actionsList {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .actionCard {
+    flex: 1 1 45%;
+  }
+}
+
+/* ================================
+   LARGE DESKTOP
+================================ */
+
+@media (min-width: 1200px) {
+
+  .heroImage img {
+    height: 450px;
+  }
+
+  .historyImage img {
+    height: 450px;
+  }
+}

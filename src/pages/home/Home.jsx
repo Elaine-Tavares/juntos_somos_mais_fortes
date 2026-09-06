@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import styles from "./Home.module.css";
 import ImagemPrincipal from '../../assets/imagem_principal.webp';
 import Banda from '../../assets/banda_de_musica_nova_cidade.webp'
+import styles from "./Home.module.css";
 
 import {
   FaHeart,
@@ -11,7 +11,6 @@ import {
   FaShoppingBasket,
   FaGraduationCap,
   FaArrowRight,
-  FaInstagram,
   FaWhatsapp,
 } from "react-icons/fa";
 
@@ -122,23 +121,23 @@ function Home() {
 
           <div className={styles.impactGrid}>
             <div className={styles.impactCard}>
-              <strong>+500</strong>
-              <span>Refeições distribuídas</span>
+              <strong>+2.000</strong>
+              <span>Quentinhas distribuídas desde 2021</span>
             </div>
 
             <div className={styles.impactCard}>
-              <strong>+100</strong>
+              <strong>+2.000</strong>
               <span>Famílias beneficiadas</span>
             </div>
 
             <div className={styles.impactCard}>
-              <strong>+30</strong>
+              <strong>8</strong>
               <span>Voluntários</span>
             </div>
 
             <div className={styles.impactCard}>
-              <strong>+10</strong>
-              <span>Ações realizadas</span>
+              <strong>1</strong>
+              <span>Parceiro(s)</span>
             </div>
           </div>
         </div>
@@ -163,19 +162,21 @@ function Home() {
             </h2>
 
             <p>
-              Nosso projeto nasceu do desejo de ajudar e contribuir para uma
-              comunidade mais acolhedora, justa e solidária.
+              Somos um projeto social que surgiu no ano de 2021, durante a pandemia, com o objetivo inicial de ajudar um casal de amigos durante a gestação. Conseguimos arrecadar diversos materiais para o nascimento da criança e também recebemos alimentos. Como o casal não precisou dos alimentos, resolvemos fazer uma doação para pessoas que estavam necessitando.
+
+              Entramos em contato com a associação de moradores e realizamos um levantamento das pessoas que estavam precisando de uma cesta básica. Com as doações arrecadadas, conseguimos montar 5 cestas básicas e fazer a entrega para moradores do bairro.
             </p>
 
             <p>
-              Por meio de nossas ações, buscamos oferecer não apenas
-              assistência, mas também oportunidades, acolhimento e esperança.
+              Uma semana depois, nos reunimos e resolvemos montar um projeto, no qual pediríamos doações aos moradores do bairro para montar cestas básicas e também preparar quentinhas para serem doadas às pessoas em situação de vulnerabilidade.
+
+              Foi então que nasceu o nome do projeto: <strong>Nova Cidade Juntos Somos Mais Fortes</strong>.
             </p>
 
-            <Link to="/quem-somos" className={styles.textLink}>
+            {/* <Link to="/quem-somos" className={styles.textLink}>
               Conheça nossa história
               <FaArrowRight />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
@@ -307,7 +308,7 @@ function Home() {
           </div>
 
           <div className={styles.partnerLogo}>
-            <span>SEASA</span>
+            <span>CEASA</span>
           </div>
         </div>
       </section>
@@ -340,27 +341,6 @@ function Home() {
               Fale conosco
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* REDES SOCIAIS */}
-      <section className={styles.social}>
-        <div className={styles.container}>
-          <h2>Acompanhe nosso trabalho</h2>
-
-          <p>
-            Siga nossas redes sociais e acompanhe de perto nossas ações.
-          </p>
-
-          <a
-            href="https://instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.instagram}
-          >
-            <FaInstagram />
-            Instagram
-          </a>
         </div>
       </section>
     </main>

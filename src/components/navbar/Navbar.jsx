@@ -18,10 +18,6 @@ function Navbar() {
         {/* LOGO */}
         <NavLink to="/" className={styles.logo} onClick={fecharMenu}>
           <img className={styles.logo_provisorio} src={Logo} alt="Logo" />
-          <span>
-            Juntos Somos
-            <strong>Mais Fortes</strong>
-          </span>
         </NavLink>
 
         {/* BOTÃO MENU MOBILE */}
@@ -52,7 +48,7 @@ function Navbar() {
           </NavLink>
 
           <NavLink
-            to="/quem-somos"
+            to="/quemsomos"
             onClick={fecharMenu}
             className={({ isActive }) =>
               isActive ? `${styles.link} ${styles.active}` : styles.link
@@ -62,23 +58,33 @@ function Navbar() {
           </NavLink>
 
           <NavLink
-            to="/projetos"
+            to="/cursos"
             onClick={fecharMenu}
             className={({ isActive }) =>
               isActive ? `${styles.link} ${styles.active}` : styles.link
             }
           >
-            Projetos
+            Cursos
           </NavLink>
 
           <NavLink
-            to="/seja-voluntario"
+            to="/sejavoluntario"
             onClick={fecharMenu}
             className={({ isActive }) =>
               isActive ? `${styles.link} ${styles.active}` : styles.link
             }
           >
             Seja Voluntário
+          </NavLink>
+
+           <NavLink
+            to="/sejaparceiro"
+            onClick={fecharMenu}
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
+          >
+            Seja Parceiro
           </NavLink>
 
           <NavLink
