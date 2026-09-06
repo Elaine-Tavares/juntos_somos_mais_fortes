@@ -1,6 +1,7 @@
 .home {
   width: 100%;
   overflow: hidden;
+  border-bottom: 3px solid var(--secondary_color);
 }
 
 .container {
@@ -16,6 +17,7 @@
 .hero {
   padding: 60px 0;
   background: #f8f6f1;
+  border-bottom: 3px solid var(--secondary_color);
 }
 
 .heroContainer {
@@ -138,6 +140,7 @@
 
 .impact {
   padding: 70px 0;
+  border-bottom: 3px solid var(--secondary_color);
 }
 
 .sectionIntro {
@@ -252,6 +255,7 @@
 
 .projects {
   padding: 70px 0;
+  border-bottom: 3px solid var(--secondary_color);
 }
 
 .sectionHeader {
@@ -321,6 +325,7 @@
 .help {
   padding: 70px 0;
   background: #f8f6f1;
+  border-bottom: 3px solid var(--secondary_color);
 }
 
 .helpGrid {
@@ -346,9 +351,8 @@
 
 .volunteer {
   padding: 70px 0;
-
-  background: #222;
-  color: #fff;
+  color: var(--terciary_color);
+  border-bottom: 3px solid var(--secondary_color);
 }
 
 .volunteerContainer {
@@ -363,16 +367,13 @@
 
 .volunteerContainer h2 {
   max-width: 700px;
-
   margin: 15px 0;
-
   font-size: 2rem;
   line-height: 1.1;
 }
 
 .volunteerContainer p {
   max-width: 600px;
-
   line-height: 1.7;
 }
 
@@ -387,18 +388,17 @@
 
 .partners {
   padding: 70px 0;
+  background: #f8f6f1;
+  border-bottom: 3px solid var(--secondary_color);
 }
 
 .partnerLogo {
   width: 180px;
   height: 100px;
-
   margin: 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border: 1px solid #ddd;
   border-radius: 10px;
 }
@@ -414,10 +414,7 @@
 
 .donation {
   padding: 70px 20px;
-
   text-align: center;
-
-  background: #f8f6f1;
 }
 
 .donationContent {
@@ -579,6 +576,7 @@
 
   .about {
     padding: 100px 0;
+    border-bottom: 3px solid var(--secondary_color);
   }
 
   .about .container {
